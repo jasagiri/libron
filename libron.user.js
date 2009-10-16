@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name          libron
 // @namespace     http://libron.net
-// @description	  Library Lookup from Amazon book listings. Currently supports libraries in Tokyo and Osaka and Kyoto.
+// @description	  Library Lookup from Amazon book listings. Currently supports libraries in Tokyo and Osaka.
 // @author        junya@champierre.com
 // @include       http://www.amazon.*
 // @require       http://github.com/champierre/libron/raw/master/libron.tokyo.js
 // @require       http://github.com/champierre/libron/raw/master/libron.osaka.js
-// @require       http://github.com/takanobu/libron/raw/new_kyoto/libron.kyoto.js
 // using [ simple version of $X   ] (c) id:os0x
 //       [ relativeToAbsolutePath ] (c) id:Yuichirou
 //       [ parseHTML              ] copied from Pagerization (c) id:ofk
@@ -15,8 +14,8 @@
 // ==/UserScript==
 
 var libron = libron ? libron : new Object();
-libron.version = "1.3";
-libron.prefectures = ['tokyo', 'osaka', 'kyoto'];
+libron.version = "1.2";
+libron.prefectures = ['tokyo', 'osaka'];
 
 var okIcon = 'data:image/png;base64,'+
     'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0'+
