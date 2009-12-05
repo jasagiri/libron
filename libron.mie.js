@@ -1,5 +1,5 @@
 // @name          libron mie module
-// @author        naoki.iimura (http://github.com/amatubu/)
+// @author        naoki.iimura (http://github.com/amatubu)
 
 var libron = libron ? libron : new Object();
 libron.mie = {

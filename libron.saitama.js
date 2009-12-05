@@ -1,5 +1,5 @@
 // @name   libron Saitama module
-// @author MIKAMI Yoshiyuki(http://github.com/yoshuki/)　(川越市、川口市、越谷市、埼玉県立、所沢市)
+// @author MIKAMI Yoshiyuki(http://github.com/yoshuki)　(川越市、川口市、越谷市、埼玉県立、所沢市)
 // @author Akira Yoshida(acura1971@gmail.com) (朝霞市、新座市、志木市、和光市)
 
 var libron = libron ? libron : new Object();
