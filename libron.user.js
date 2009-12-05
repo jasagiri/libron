@@ -69,6 +69,10 @@ var selectedPrefecture;
 function initialize() {
   selectedPrefecture = GM_getValue("prefecture") || 'tokyo';
   selectedLibrary = GM_getValue("library") || 'tokyo';
+  if (!libron[selectedPrefecture].libraries[selectedLibrary]) {
+    selectedPrefecture = 'tokyo';
+    selectedLibrary = 'tokyo';
+  }
 }
 
 function addSelectBox() {
