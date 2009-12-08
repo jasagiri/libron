@@ -55,7 +55,7 @@ libron.osaka = {
   'nacsis':{'group':'全国サイト', 'name':'NACSIS Webcat', 'code':'nacsis'}
   },
   checkLibrary: function(div, isbn){
-    var url = 'http://www.library.pref.osaka.jp/cgi-bin/book.cgi';
+    var url = 'http://copac.library.pref.osaka.jp/cgi-bin/book.cgi';
     var data = 'bname=%B8%A1%BA%F7%B3%AB%BB%CF&joinflag=AND&isbn=' + formatIsbn(isbn) + '&svr1='+ libron[selectedPrefecture].libraries[selectedLibrary].code;
     libron.osaka._getSessionId(div, url, data);
   },
