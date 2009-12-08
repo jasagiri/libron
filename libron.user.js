@@ -29,7 +29,7 @@
 // ==/UserScript==
 
 var libron = libron ? libron : new Object();
-libron.version = "1.92";
+libron.version = "1.93";
 
 // http://ja.wikipedia.org/wiki/都道府県 の並び順
 libron.prefectures = ['saitama', 'chiba', 'tokyo', 'kanagawa', 'niigata', 'gifu', 'mie', 'kyoto', 'osaka', 'hyogo'];

@@ -1,3 +1,8 @@
+v1.93
+====
+大阪府Web-OPAC横断検索のURL変更に対応
+http://www.library.pref.osaka.jp/cgi-bin/book.cgi => http://copac.library.pref.osaka.jp/cgi-bin/book.cgi
+
 v1.92
 ====
 新潟県内、新潟市の図書館に対応
