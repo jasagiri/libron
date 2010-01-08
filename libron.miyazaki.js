@@ -69,6 +69,7 @@ libron.miyazaki = {
           form.id = id;
           form.action = resolver(form.getAttribute('action'));
           form.target = '_blank';
+          form.setAttribute('accept-charset', 'utf-8');
           addForm(div, form);
         } else {
           addNALink(div, errUrl);
