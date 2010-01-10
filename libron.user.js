@@ -14,6 +14,7 @@
 // @require       http://github.com/champierre/libron/raw/master/libron.saitama.js
 // @require       http://github.com/champierre/libron/raw/master/libron.mie.js
 // @require       http://github.com/champierre/libron/raw/master/libron.niigata.js
+// @require       http://github.com/champierre/libron/raw/master/libron.miyazaki.js
 // using [ simple version of $X   ] (c) id:os0x
 //       [ relativeToAbsolutePath ] (c) id:Yuichirou
 //       [ parseHTML              ] copied from Pagerization (c) id:ofk
@@ -25,14 +26,15 @@
 //                                        (c) Akira Yoshida(acura1971@gmail.com)
 // merged with [ libron Mie version ] (c) naoki.iimura(http://github.com/amatubu)
 // merged with [ libron Niigata version ] (c) Shinichiro Oguma(http://github.com/ogumashin)
+// merged with [ libron Miyazaki version ] (c) Seiya ISHIMARU (http://github.com/ishimaru-s)
 // thanks
 // ==/UserScript==
 
 var libron = libron ? libron : new Object();
-libron.version = "1.93";
+libron.version = "1.94";
 
 // http://ja.wikipedia.org/wiki/都道府県 の並び順
-libron.prefectures = ['saitama', 'chiba', 'tokyo', 'kanagawa', 'niigata', 'gifu', 'mie', 'kyoto', 'osaka', 'hyogo'];
+libron.prefectures = ['saitama', 'chiba', 'tokyo', 'kanagawa', 'niigata', 'gifu', 'mie', 'kyoto', 'osaka', 'hyogo', 'miyazaki'];
 
 var okIcon = 'data:image/png;base64,'+
     'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0'+
