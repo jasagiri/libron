@@ -13,10 +13,10 @@ libron.saitama = {
     "koshigaya-shi":  {"group": "南埼玉地区", "name": "越谷市立図書館", "httpMethod": "POST"},
     "saitama-ken":    {"group": "県内広域", "name": "埼玉県立図書館", "httpMethod": "GET"},
     "tokorozawa-shi": {"group": "入間地区", "name": "所沢市立所沢図書館", "httpMethod": "GET"},
-    "asaka-shi":      {"group": "北足立地区", "name": "朝霞市立図書館", "httpMethod": "GET"},
+    //"asaka-shi":      {"group": "北足立地区", "name": "朝霞市立図書館", "httpMethod": "GET"},
     "niiza-shi":      {"group": "北足立地区", "name": "新座市立図書館", "httpMethod": "GET"},
     "shiki-shi":      {"group": "北足立地区", "name": "志木市立図書館", "httpMethod": "GET"},
-    "wako-shi":       {"group": "北足立地区", "name": "和光市立図書館", "httpMethod": "GET"},
+    //"wako-shi":       {"group": "北足立地区", "name": "和光市立図書館", "httpMethod": "GET"},
   },
   checkLibrary: function(div, isbn) {
     var url;
