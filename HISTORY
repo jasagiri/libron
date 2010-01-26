@@ -1,3 +1,7 @@
+v1.96
+====
+Firefox 3.6 で parseHTML が正常に動作しない点を修正 by negachov(http://github.com/negachov)
+
 v1.95
 ====
 滋賀県内の図書館に対応
