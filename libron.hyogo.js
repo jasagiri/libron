@@ -1,5 +1,5 @@
 // @name          libron Hyogo module
-// @author        Mutsutoshi Yoshimoto(http://github.com/negachov/)
+// @author        Mutsutoshi Yoshimoto(http://github.com/negachov)
 
 var libron = libron ? libron : new Object();
 libron.hyogo = {

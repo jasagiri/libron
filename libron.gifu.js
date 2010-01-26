@@ -1,5 +1,5 @@
 // @name          libron Gifu module
-// @author        Gifuron(http://github.com/gifuron/)
+// @author        Gifuron(http://github.com/gifuron)
 
 var libron = libron ? libron : new Object();
 libron.gifu = {

@@ -1,5 +1,5 @@
 // @name          libron Tokyo module
-// @author        Junya Ishihara(http://github.com/champierre/)
+// @author        Junya Ishihara(http://github.com/champierre)
 
 var libron = libron ? libron : new Object();
 libron.tokyo = {

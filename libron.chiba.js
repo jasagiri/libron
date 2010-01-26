@@ -1,5 +1,5 @@
 // @name          libron Chiba module
-// @author        Junya Ishihara(http://github.com/champierre/)
+// @author        Junya Ishihara(http://github.com/champierre)
 
 var libron = libron ? libron : new Object();
 libron.chiba = {
@@ -28,6 +28,7 @@ libron.chiba = {
   'ichikawa':{'group':'西部エリア', 'name':'市川市立図書館', 'code':'&dbsort=ICHIKAWA'},
   'funabashi':{'group':'西部エリア', 'name':'船橋市図書館', 'code':'&dbsort=FUNABASHI'},
   'urayasu':{'group':'西部エリア', 'name':'浦安市立図書館', 'code':'&dbsort=URAYASU'},
+  'matsudo':{'group':'西部エリア', 'name':'松戸市立図書館', 'code':'&dbsort=MATSUDO'},
   'kashiwa':{'group':'西部エリア', 'name':'柏市立図書館', 'code':'&dbsort=KASHIWA'},
   'noda':{'group':'西部エリア', 'name':'野田市立図書館', 'code':'&dbsort=NODA'},
   'nagareyama':{'group':'西部エリア', 'name':'流山市立図書館', 'code':'&dbsort=NAGAREYAMA'},

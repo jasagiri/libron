@@ -2,7 +2,7 @@
 // @name          libron
 // @namespace     http://libron.net
 // @description	  Amazon のページから最寄りの図書館の蔵書を検索
-// @author        Junya Ishihara(http://github.com/champierre/)
+// @author        Junya Ishihara(http://github.com/champierre)
 // @include       http://www.amazon.*
 // @require       http://github.com/champierre/libron/raw/master/libron.tokyo.js
 // @require       http://github.com/champierre/libron/raw/master/libron.osaka.js
@@ -13,23 +13,30 @@
 // @require       http://github.com/champierre/libron/raw/master/libron.gifu.js
 // @require       http://github.com/champierre/libron/raw/master/libron.saitama.js
 // @require       http://github.com/champierre/libron/raw/master/libron.mie.js
+// @require       http://github.com/champierre/libron/raw/master/libron.niigata.js
+// @require       http://github.com/champierre/libron/raw/master/libron.miyazaki.js
+// @require       http://github.com/champierre/libron/raw/master/libron.shiga.js
 // using [ simple version of $X   ] (c) id:os0x
 //       [ relativeToAbsolutePath ] (c) id:Yuichirou
 //       [ parseHTML              ] copied from Pagerization (c) id:ofk
-// merged with [ libron Osaka, Hyogo version ] (c) Mutsutoshi Yoshimoto(http://github.com/negachov/)
-// merged with [ libron Kyoto version ] (c) Takanobu Nishimura(http://github.com/takanobu/)
-// merged with [ libron Kanagawa version ] (c) Yukinori Suda(http://github.com/sudabon/)
-// merged with [ libron Gifu version ] (c)  Gifuron(http://github.com/gifuron/)
-// merged with [ libron Saitama version ] (c) MIKAMI Yoshiyuki(http://github.com/yoshuki/)
-// merged with [ libron Mie version ] (c) naoki.iimura (http://github.com/amatubu/)
+// merged with [ libron Osaka, Hyogo version ] (c) Mutsutoshi Yoshimoto(http://github.com/negachov)
+// merged with [ libron Kyoto version ] (c) Takanobu Nishimura(http://github.com/takanobu)
+// merged with [ libron Kanagawa version ] (c) Yukinori Suda(http://github.com/sudabon)
+// merged with [ libron Gifu version ] (c)  Gifuron(http://github.com/gifuron)
+// merged with [ libron Saitama version ] (c) MIKAMI Yoshiyuki(http://github.com/yoshuki)
+//                                        (c) Akira Yoshida(acura1971@gmail.com)
+// merged with [ libron Mie version ] (c) naoki.iimura(http://github.com/amatubu)
+// merged with [ libron Niigata version ] (c) Shinichiro Oguma(http://github.com/ogumashin)
+// merged with [ libron Miyazaki version ] (c) Seiya ISHIMARU (http://github.com/ishimaru-s)
+// merged with [ libron Shiga version ] (c) sowt (http://sowt.on-air.ne.jp/)
 // thanks
 // ==/UserScript==
 
 var libron = libron ? libron : new Object();
-libron.version = "1.9";
+libron.version = "1.95";
 
 // http://ja.wikipedia.org/wiki/都道府県 の並び順
-libron.prefectures = ['saitama', 'chiba', 'tokyo', 'kanagawa', 'gifu', 'mie', 'kyoto', 'osaka', 'hyogo'];
+libron.prefectures = ['saitama', 'chiba', 'tokyo', 'kanagawa', 'niigata', 'gifu', 'mie', 'shiga', 'kyoto', 'osaka', 'hyogo', 'miyazaki'];
 
 var okIcon = 'data:image/png;base64,'+
     'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0'+
@@ -66,6 +73,10 @@ var selectedPrefecture;
 function initialize() {
   selectedPrefecture = GM_getValue("prefecture") || 'tokyo';
   selectedLibrary = GM_getValue("library") || 'tokyo';
+  if (!libron[selectedPrefecture].libraries[selectedLibrary]) {
+    selectedPrefecture = 'tokyo';
+    selectedLibrary = 'tokyo';
+  }
 }
 
 function addSelectBox() {
@@ -197,7 +208,7 @@ function libraryLinky(){
     var isbn = matched[2];
     var div = document.getElementById('btAsinTitle').parentNode.parentNode;
     libron[selectedPrefecture].checkLibrary(div, isbn);
-  } else if ((href.indexOf('/s/') != -1) || (href.indexOf('/exec/') != -1)){
+  } else if ((href.indexOf('/s/') != -1) || (href.indexOf('/exec/') != -1) || (href.indexOf('/gp/search') != -1)){
     var divs = document.getElementsByTagName('div');
     for (var i = 0; i < divs.length; i++) {
       var div = divs[i];

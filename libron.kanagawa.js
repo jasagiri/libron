@@ -1,5 +1,5 @@
 // @name libron Kanagawa module
-// @author Yukinori Suda(http://github.com/sudabon/)
+// @author Yukinori Suda(http://github.com/sudabon)
 
 var libron = libron ? libron : new Object();
 libron.kanagawa = {
