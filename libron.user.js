@@ -233,7 +233,14 @@ function formatIsbn(str) {
 
 function parseHTML(str) {
   str = str.replace(parseHTML.reg, '');
-  var res = document.implementation.createDocument(null, 'html', null);
+  var res;
+  try {
+    res = document.cloneNode(false);
+    res.appendChild(res.importNode(document.documentElement, false));
+  }
+  catch(e) {
+    res = document.implementation.createDocument(null, 'html', null);
+  }
   var range = document.createRange();
   range.setStartAfter(document.body);
   var fragment = range.createContextualFragment(str);
